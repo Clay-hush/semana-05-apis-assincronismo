@@ -1,0 +1,127 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 05 - APIs e Assincronismo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        button:disabled {
+            cursor: not-allowed;
+        }
+
+        .status {
+            min-height: 24px;
+        }
+
+        .erro {
+            color: #b00020;
+        }
+
+        .sucesso {
+            color: #176b32;
+        }
+
+        dl {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            gap: 8px 16px;
+        }
+
+        dt {
+            font-weight: bold;
+        }
+
+        dd {
+            margin: 0;
+        }
+
+        img {
+            max-width: 180px;
+            image-rendering: pixelated;
+        }
+    </style>
+
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <h1>Semana 05 — Objetos, Dados e Assincronismo</h1>
+
+    <section>
+        <h2>Parte 1 — Validação de pedidos</h2>
+        <p>Os resultados dos pedidos serão apresentados no Console do navegador.</p>
+    </section>
+
+    <section>
+        <h2>Parte 2 — Buscador de CEP</h2>
+
+        <form id="formulario-cep">
+            <label for="cep">Digite o CEP:</label>
+            <input
+                type="text"
+                id="cep"
+                placeholder="Ex.: 01001000"
+                maxlength="20"
+                autocomplete="postal-code"
+                required
+            >
+            <button type="submit" id="botao-cep">Buscar CEP</button>
+        </form>
+
+        <p id="status-cep" class="status" role="status" aria-live="polite"></p>
+
+        <dl id="resultado-cep"></dl>
+
+        <h3>Historico de CEPs</h3>
+        <ul id="historico-cep"></ul>
+    </section>
+
+    <section>
+        <h2>Parte 3 — Mini Pokedex</h2>
+
+        <form id="formulario-pokemon">
+            <label for="pokemon">Nome do Pokemon:</label>
+            <input
+                type="text"
+                id="pokemon"
+                placeholder="Ex.: pikachu"
+                required
+            >
+            <button type="submit" id="botao-pokemon">Buscar Pokemon</button>
+        </form>
+
+        <p id="status-pokemon" class="status" role="status" aria-live="polite"></p>
+
+        <div id="resultado-pokemon"></div>
+    </section>
+</body>
+</html>
+```
